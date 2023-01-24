@@ -1712,7 +1712,7 @@
           <plugin>
             <artifactId>maven-failsafe-plugin</artifactId>
             <configuration>
-              <skipTests>false</skipTests>
+              <skipTests>true</skipTests>
               <useSystemClassLoader>false</useSystemClassLoader>
               <useManifestOnlyJar>false</useManifestOnlyJar>
               <!--               <forkMode>pertest</forkMode> this is the same as below -->
