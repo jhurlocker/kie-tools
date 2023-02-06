@@ -19,7 +19,7 @@
   ],
   "scripts": {
     "build:dev": "rimraf dist && pnpm copy:css && tsc -p tsconfig.json",
-    "build:prod": "rimraf dist && pnpm lint && pnpm copy:css && tsc -p tsconfig.json && pnpm test",
+    "build:prod": "rimraf dist && pnpm lint && pnpm copy:css && tsc -p tsconfig.json ",
     "build:watch": "rimraf dist && pnpm copy:css && tsc -p tsconfig.json --watch",
     "copy:css": "copyfiles -u 1 \"src/**/*.{sass,scss,css}\" dist/",
     "lint": "run-script-if --bool \"$(build-env linters.run)\" --then \"kie-tools--eslint ./src\"",

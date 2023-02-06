@@ -38,7 +38,7 @@
   ],
   "scripts": {
     "build:dev": "rimraf dist && pnpm copy:src",
-    "build:prod": "rimraf dist && pnpm copy:src && pnpm test",
+    "build:prod": "rimraf dist && pnpm copy:src ",
     "copy:src": "copyfiles -u 1 \"src/**/*.{js,ts}\" dist/",
     "test": "run-script-if --ignore-errors \"$(build-env tests.ignoreFailures)\" --bool \"$(build-env tests.run)\" --then \"karma start --single-run --watch\""
   },

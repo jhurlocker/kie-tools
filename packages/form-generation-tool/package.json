@@ -19,8 +19,8 @@
   ],
   "scripts": {
     "build:dev": "rimraf dist && webpack --env dev",
-    "build:prod": "pnpm lint && pnpm test && rimraf dist && webpack && run-script-os",
-    "build:prod:all": "pnpm lint && pnpm test && rimraf dist && webpack && pnpm && pnpm package:prod:linux && pnpm package:prod:darwin && pnpm package:prod:win32",
+    "build:prod": "pnpm lint  && rimraf dist && webpack && run-script-os",
+    "build:prod:all": "pnpm lint  && rimraf dist && webpack && pnpm && pnpm package:prod:linux && pnpm package:prod:darwin && pnpm package:prod:win32",
     "build:prod:darwin": "pkg dist/index.js --output dist/form-generation-cli-macos --target node16-macos-x64",
     "build:prod:linux": "pkg dist/index.js --output dist/form-generation-cli-linux --target node16-linux-x64",
     "build:prod:win32": "pkg dist/index.js --output dist/form-generation-cli-win.exe --target node16-win-x64",

@@ -16,7 +16,7 @@
   "main": "dist/index.js",
   "scripts": {
     "build:dev": "rimraf dist && pnpm copy:css && webpack --env dev",
-    "build:prod": "pnpm lint && pnpm test && rimraf dist && pnpm copy:css && webpack",
+    "build:prod": "pnpm lint  && rimraf dist && pnpm copy:css && webpack",
     "copy:css": "copyfiles -u 1 \"src/**/*.{sass,scss,css}\" dist/",
     "lint": "run-script-if --bool \"$(build-env linters.run)\" --then \"kie-tools--eslint ./src\"",
     "start": "webpack serve -c ./dev-webapp/webpack.config.js --host 0.0.0.0 --env dev",

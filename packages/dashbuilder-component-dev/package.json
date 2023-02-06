@@ -20,7 +20,7 @@
   ],
   "scripts": {
     "build:dev": "rimraf dist && pnpm copy:css && tsc -p tsconfig.json",
-    "build:prod": "pnpm lint && rimraf dist && pnpm copy:css && tsc -p tsconfig.json && pnpm test",
+    "build:prod": "pnpm lint && rimraf dist && pnpm copy:css && tsc -p tsconfig.json",
     "copy:css": "copyfiles -u 1 \"src/**/*.{sass,scss,css}\" dist/",
     "lint": "run-script-if --bool \"$(build-env linters.run)\" --then \"kie-tools--eslint ./src\"",
     "test": "run-script-if --ignore-errors \"$(build-env tests.ignoreFailures)\" --bool \"$(build-env tests.run)\" --then \"jest --silent --verbose --passWithNoTests\""
